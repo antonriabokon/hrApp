@@ -18,10 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <header>
-        <h1>HR application</h1>
-      </header>
-
+     <Header />
       <main>
         {people.map((person, index) => (
           <div className="card" key={index}>
@@ -34,10 +31,7 @@ const App = () => {
           </div>
         ))}
       </main>
-
-      <footer>
-        <p>&copy; 2025. REACT25K. Business College Helsinki</p>
-      </footer>
+     <Footer />
     </div>
   );
 };
