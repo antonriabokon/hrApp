@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            <h3>©2025 Anton Riabokon</h3>
+            <p>&copy; 2025. REACT25K. Business College Helsinki</p>
         </footer>
     )
 };
