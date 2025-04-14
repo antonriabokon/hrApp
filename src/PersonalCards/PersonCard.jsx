@@ -13,16 +13,16 @@ const PersonCard = (props) => {
             years -= 1;
         }
 
-        const monthsWorked = (now - start) / (1000 * 60 * 60 * 24 * 30.44);
+        const monthsWorked = Math.round((now - start) / (1000 * 60 * 60 * 24 * 30.44));
 
         let message = "";
         if (years > 0 && years % 5 === 0) {
             message = "🎉 Schedule recognition meeting.";
-        } else if (monthsWorked == 6) {
+        } else if (monthsWorked === 6) {
             message = "🔔 Schedule probation review.";
         }
 
-        return `${years} years. ${monthsWorked} month. ${message}`;
+        return `${years} year(s). (${monthsWorked} month.) ${message}`;
     };
 
     return (
