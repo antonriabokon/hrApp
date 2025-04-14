@@ -1,0 +1,21 @@
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    line-height: 1.9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .pic {
+    background-color: rgb(230, 230, 230);
+    padding: 80px 0px 80px 0px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+  }
