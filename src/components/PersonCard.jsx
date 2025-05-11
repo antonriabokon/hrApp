@@ -1,3 +1,5 @@
+import "./PersonCard.css";
+
 const PersonCard = (props) => {
     const getYearsWorked = () => {
         const start = new Date(props.startDate);
