@@ -38,7 +38,7 @@ const App = () => {
                 axios
                   .post("http://localhost:3001/employees", newEmployee)
                   .then((res) => setEmployees([...employees, res.data]))
-                  .catch((err) => console.error("Error adding employee:", err));
+                  .catch((error) => console.error("Error adding employee:", error));
               }}
             />
           ),
