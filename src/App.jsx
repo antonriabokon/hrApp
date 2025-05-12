@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Root from "./pages/Root";
