@@ -1,4 +1,3 @@
-import {persons} from "../data/cardBase.js";
 import PersonCard from "./PersonCard.jsx";
 
 const CardList = ({ persons }) => {
@@ -10,4 +9,5 @@ const CardList = ({ persons }) => {
     </main>
   );
 };
+
 export default CardList;
