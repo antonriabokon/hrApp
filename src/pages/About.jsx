@@ -1,9 +1,14 @@
+import styles from "./About.module.css";
+
 const About = () => {
-    return (
-      <main className="about-page">
-        <h1>About section</h1>
-        <p>This is a simple HR application built with React. It supports adding employees, managing data, and navigating between sections.</p>
-      </main>
-    );
-  };
-  export default About;
+  return (
+    <section className={styles.page}>
+      <h1 className={styles.title}>About This App</h1>
+      <p className={styles.text}>
+        This HR Application allows you to manage employees, 
+        edit their information, and keep your data organized.
+      </p>
+    </section>
+  );
+};
+export default About;

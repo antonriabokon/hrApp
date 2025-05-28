@@ -1,32 +1,32 @@
-.form-wrapper {
+.formWrapper {
     display: flex;
     justify-content: center;
     padding: 40px;
   }
   
-  form {
+  .form {
     display: flex;
     flex-direction: column;
     gap: 15px;
     width: 300px;
   }
   
-  .form-row {
+  .formRow {
     display: flex;
     flex-direction: column;
   }
   
-  label {
+  .label {
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  input {
+  .input {
     padding: 8px;
     font-size: 1rem;
   }
   
-  button {
+  .button {
     padding: 10px;
     background-color: #ff5693;
     border: none;
@@ -36,6 +36,16 @@
     border-radius: 5px;
   }
   
-  button:hover {
+  .button:hover {
     background-color: #e04c83;
   }  
+
+  @media (max-width: 768px) {
+    .formWrapper {
+      padding: 20px;
+    }
+  
+    .form {
+      width: 100%;
+    }
+  }

@@ -1,18 +1,21 @@
+import styles from "./CardList.module.css";
 import PersonCard from "./PersonCard.jsx";
 
 const CardList = ({ employees, onUpdateEmployee }) => {
-  console.log("Rendering CardList with", employees);
-
   if (employees.length === 0) {
-    return <p className="loading">Loading employees...</p>;
+    return (
+      <div className={styles.spinnerWrapper}>
+        <div className={styles.spinner}></div>
+      </div>
+    );
   }
 
   return (
-    <main className="card-list">
+    <div className={styles.container}>
       {employees.map((person) => (
         <PersonCard key={person.id} {...person} onUpdate={onUpdateEmployee} />
       ))}
-    </main>
+    </div>
   );
 };
 

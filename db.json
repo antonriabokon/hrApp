@@ -21,7 +21,7 @@
       "id": "2",
       "name": "Bob",
       "occupation": "Designer",
-      "salary": "3400",
+      "salary": 3450,
       "phone": "0410899827",
       "email": "bob@email.com",
       "pet": "🐈 Cat",
@@ -43,7 +43,7 @@
       "email": "charlie@email.com",
       "pet": "🐠 Fish",
       "startDate": "2010-03-04",
-      "location": "Ottava",
+      "location": "Ottawa",
       "department": "Education",
       "skills": [
         "Conflict resolution",
@@ -64,14 +64,14 @@
       "department": "Healthcare",
       "skills": [
         "Patient care",
-        "Clinical knowladge",
+        "Clinical knowledge",
         "Symptomatology"
       ]
     },
     {
       "id": "5",
       "name": "Lisa",
-      "occupation": "Jornalist",
+      "occupation": "Journalist",
       "salary": 2900,
       "phone": "0414495676",
       "email": "lisa@email.com",
