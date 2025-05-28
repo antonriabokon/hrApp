@@ -33,6 +33,7 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
   }
   
   button:hover {
