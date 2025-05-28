@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import "./AddPerson.css";
+import styles from "./AddPerson.module.css";
 
 const AddPerson = ({ onAddEmployee }) => {
   const [formData, setFormData] = useState({
@@ -13,7 +13,7 @@ const AddPerson = ({ onAddEmployee }) => {
     startDate: "",
     location: "",
     department: "",
-    skills: ""
+    skills: "",
   });
 
   const navigate = useNavigate();
@@ -35,27 +35,34 @@ const AddPerson = ({ onAddEmployee }) => {
     };
 
     onAddEmployee(newEmployee);
-    navigate("/");
+    setTimeout(() => navigate("/"), 1000);
   };
 
   return (
-    <main className="form-wrapper">
-      <form onSubmit={handleSubmit}>
-        {Object.keys(formData).map((key) => (
-          <div key={key} className="form-row">
-            <label htmlFor={key}>{key}:</label>
-            <input
-              type="text"
-              id={key}
-              name={key}
-              value={formData[key]}
-              onChange={handleChange}
-            />
-          </div>
-        ))}
-        <button type="submit">Add Employee</button>
-      </form>
-    </main>
+    <main className={styles.formWrapper}>
+    <form onSubmit={handleSubmit} className={styles.form}>
+          {Object.keys(formData).map((key) => (
+        <div key={key} className={styles.formRow}>
+          <label htmlFor={key} className={styles.label}>{key}:</label>
+          <input
+            type={
+              key === "startDate"
+                ? "date"
+                : key === "salary" || key === "phone"
+                ? "number"
+                : "text"
+            }
+            id={key}
+            name={key}
+            className={styles.input}
+            value={formData[key]}
+            onChange={handleChange}
+          />
+        </div>
+      ))}
+            <button type="submit" className={styles.button}>Add Employee</button>
+    </form>
+  </main>
   );
 };
 

@@ -1,0 +1,45 @@
+.editForm {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.editForm input {
+  width: 100%;
+  max-width: 90%;
+  align-self: center;
+  font-size: 0.95rem;
+  padding: 8px;
+}
+
+.saveButton,
+.cancelButton {
+  padding: 10px 15px;
+  background-color: #ff5693;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 40%;
+  align-self: center;
+}
+
+.saveButton:hover,
+.cancelButton:hover {
+  background-color: #e04c83;
+}
+
+@media (max-width: 480px) {
+  .editForm input {
+    max-width: 100%;
+  }
+
+  .saveButton,
+  .cancelButton {
+    width: 80%;
+  }
+}

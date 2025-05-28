@@ -1,17 +1,26 @@
-import { Link } from "react-router";
-import "./Header.css";
+import { useState } from "react";
+import { NavLink } from "react-router";
+import styles from "./Header.module.css";
 
 const Header = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <header>
-      <h1>HR application</h1>
-      <nav>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/add">Add Employee</Link></li>
-        </ul>
-      </nav>
+    <header className={styles.header}>
+      <h1 className={styles.title}>HR application</h1>
+      <button
+  className={styles.menuButton}
+  onClick={() => setMenuOpen((prev) => !prev)}
+  aria-label="Toggle navigation"
+  aria-expanded={menuOpen}
+>
+  ☰
+</button>
+      <ul className={`${styles.navList} ${menuOpen ? styles.open : ""}`}>
+        <li><NavLink to="/">Home</NavLink></li>
+        <li><NavLink to="/add">Add</NavLink></li>
+        <li><NavLink to="/about">About</NavLink></li>
+      </ul>
     </header>
   );
 };
